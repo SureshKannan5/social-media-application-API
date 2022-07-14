@@ -80,8 +80,8 @@ exports.forgotPassword = (req,res)=>{
         from:"noreply@node-react.com",
         to:email,
         subject:"Password Reset Instruction",
-        text:`Please use the following link to reset your password:${process.env.CLIENT_URL}/reset-password/${token}`,
-        html:`<p>Please use the following link to reset Password:</p> <p>${process.env.CLIENT_URL}/reset-password/${token}`
+        text:`Please use the following link to reset your password:${process.env.CLIENT_URL}reset-password/${token}`,
+        html:`<p>Please use the following link to reset Password:</p> <p>${process.env.CLIENT_URL}reset-password/${token}`
     };
 
     return user.updateOne({
